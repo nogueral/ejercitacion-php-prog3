@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "d135491c-8b96-4352-8e66-cce5647b5c7b",
+		"name": "ejercicio32",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "claveNueva",
+							"value": "8888",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "8888",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "leandrodnog@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Leandro",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Noguera",
+						"ejercicio32",
+						"ModificacionUsuario.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "claveNueva",
+									"value": "8888",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "8888",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "leandrodnog@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Leandro",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"ejercicio32",
+								"ModificacionUsuario.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 22 Apr 2021 12:08:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Error al guardar"
+				},
+				{
+					"name": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "claveNueva",
+									"value": "1274",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "holamundo",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "leandrodnog@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Leandro",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"ejercicio32",
+								"ModificacionUsuario.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 22 Apr 2021 12:15:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Clave modificada con exito"
+				},
+				{
+					"name": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "claveNueva",
+									"value": "holamundo",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "0123",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "bhoff5@addthis.com",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Bili",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/Noguera/ejercicio32/ModificacionUsuario.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"ejercicio32",
+								"ModificacionUsuario.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 22 Apr 2021 12:21:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Clave modificada con exito"
+				}
+			]
+		}
+	]
+}
