@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "1c0dbb04-98be-46e1-b6fc-d76d42ff5d07",
+		"name": "ejercicio33",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/Noguera/ejercicio33/modificacionproducto.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoBarra",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Cafe",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "No perecedero",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "98",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "78.82",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/Noguera/ejercicio33/modificacionproducto.php",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Noguera",
+						"ejercicio33",
+						"modificacionproducto.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost/Noguera/ejercicio33/modificacionproducto.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoBarra",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Cafe",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "No perecedero",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "98",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "78.82",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/Noguera/ejercicio33/modificacionproducto.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"ejercicio33",
+								"modificacionproducto.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 22 Apr 2021 12:59:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Actualizado"
+				},
+				{
+					"name": "localhost/Noguera/ejercicio33/modificacionproducto.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoBarra",
+									"value": "878787",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Leche",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "Lacteo",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "74.88",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "78.82",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/Noguera/ejercicio33/modificacionproducto.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"ejercicio33",
+								"modificacionproducto.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 22 Apr 2021 13:04:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "9"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Ingresado"
+				}
+			]
+		}
+	]
+}
