@@ -1,0 +1,750 @@
+{
+	"info": {
+		"_postman_id": "33ecf39d-9d31-461d-add3-c3aa52b169df",
+		"name": "PDO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:38:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2790"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\n<br/>\n<table>\n    <tr>\n        <td>105</td>\n        <td>Bili</td>\n        <td>Baus</td>\n        <td>holamundo</td>\n        <td>bhoff5@addthis.com</td>\n        <td>2020-11-27</td>\n        <td>Moreno</td>\n    </tr>\n    <tr>\n        <td>103</td>\n        <td>Deloris</td>\n        <td>Fosis</td>\n        <td>5678</td>\n        <td>bsharpe2@wisc.edu</td>\n        <td>2020-08-28</td>\n        <td>Avellaneda</td>\n    </tr>\n    <tr>\n        <td>101</td>\n        <td>Esteban</td>\n        <td>Madou</td>\n        <td>2345</td>\n        <td>dkantor0@example.com</td>\n        <td>2021-07-01</td>\n        <td>Quilmes</td>\n    </tr>\n    <tr>\n        <td>104</td>\n        <td>Garrick</td>\n        <td>Brent</td>\n        <td>6789</td>\n        <td>gbrent4@theguardian.com</td>\n        <td>2020-12-17</td>\n        <td>Moron</td>\n    </tr>\n    <tr>\n        <td>102</td>\n        <td>German</td>\n        <td>Gerram</td>\n        <td>1234</td>\n        <td>ggerram1@hu.gov</td>\n        <td>2020-08-05</td>\n        <td>Berazategui</td>\n    </tr>\n    <tr>\n        <td>106</td>\n        <td>Leandro</td>\n        <td>Noguera</td>\n        <td>1274</td>\n        <td>leandrodnog@gmail.com</td>\n        <td>2021-04-14</td>\n        <td>CABA</td>\n    </tr>\n</table>\n<br/>\n<br/>\n<table>\n    <tr>\n        <td>1012</td>\n        <td>886547</td>\n        <td>Agua mineral</td>\n        <td>No perecedero</td>\n        <td>85</td>\n        <td>43.81</td>\n        <td>2021-04-21</td>\n        <td>2021-04-21</td>\n    </tr>\n    <tr>\n        <td>1007</td>\n        <td>77900367</td>\n        <td>Bachellier</td>\n        <td>solido</td>\n        <td>59</td>\n        <td>66.6</td>\n        <td>2021-01-30</td>\n        <td>2020-07-06</td>\n    </tr>\n    <tr>\n        <td>1014</td>\n        <td>123456</td>\n        <td>Cafe</td>\n        <td>No perecedero</td>\n        <td>98</td>\n        <td>78.82</td>\n        <td>2021-04-21</td>\n        <td>2021-04-22</td>\n    </tr>\n    <tr>\n        <td>1011</td>\n        <td>77900328</td>\n        <td>Chocolate</td>\n        <td>solido</td>\n        <td>56</td>\n        <td>66.6</td>\n        <td>2021-04-12</td>\n        <td>2021-04-14</td>\n    </tr>\n    <tr>\n        <td>1008</td>\n        <td>77900368</td>\n        <td>Fleming</td>\n        <td>solido</td>\n        <td>38</td>\n        <td>66.6</td>\n        <td>2020-10-26</td>\n        <td>2020-03-10</td>\n    </tr>\n    <tr>\n        <td>1013</td>\n        <td>998745</td>\n        <td>Harina</td>\n        <td>No perecedero</td>\n        <td>58</td>\n        <td>82.53</td>\n        <td>2021-04-21</td>\n        <td>2021-04-21</td>\n    </tr>\n    <tr>\n        <td>1005</td>\n        <td>77900365</td>\n        <td>Hudd</td>\n        <td>solido</td>\n        <td>68</td>\n        <td>66.6</td>\n        <td>2020-12-19</td>\n        <td>2020-06-19</td>\n    </tr>\n    <tr>\n        <td>1009</td>\n        <td>77900369</td>\n        <td>Hurry</td>\n        <td>solido</td>\n        <td>44</td>\n        <td>66.6</td>\n        <td>2020-04-07</td>\n        <td>2020-05-30</td>\n    </tr>\n    <tr>\n        <td>1015</td>\n        <td>878787</td>\n        <td>Leche</td>\n        <td>Lacteo</td>\n        <td>75</td>\n        <td>78.82</td>\n        <td>2021-04-22</td>\n        <td>2021-04-22</td>\n    </tr>\n    <tr>\n        <td>1004</td>\n        <td>77900364</td>\n        <td>McNickle</td>\n        <td>polvo</td>\n        <td>0</td>\n        <td>53.51</td>\n        <td>2020-11-28</td>\n        <td>2020-04-17</td>\n    </tr>\n    <tr>\n        <td>1003</td>\n        <td>77900363</td>\n        <td>Newgrosh</td>\n        <td>polvo</td>\n        <td>0</td>\n        <td>68.19</td>\n        <td>2020-11-29</td>\n        <td>2021-02-11</td>\n    </tr>\n    <tr>\n        <td>1006</td>\n        <td>77900366</td>\n        <td>Schrader</td>\n        <td>polvo</td>\n        <td>0</td>\n        <td>96.54</td>\n        <td>2020-02-08</td>\n        <td>2020-08-14</td>\n    </tr>\n    <tr>\n        <td>1002</td>\n        <td>77900362</td>\n        <td>Spirit</td>\n        <td>solido</td>\n        <td>45</td>\n        <td>66.6</td>\n        <td>2020-09-18</td>\n        <td>2020-04-14</td>\n    </tr>\n    <tr>\n        <td>1001</td>\n        <td>77900361</td>\n        <td>Westmacott</td>\n        <td>liquido</td>\n        <td>33</td>\n        <td>15.87</td>\n        <td>2020-09-02</td>\n        <td>2020-09-26</td>\n    </tr>\n</table>\n<br/>"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?order=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:38:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2790"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\n<br/>\n<table>\n    <tr>\n        <td>106</td>\n        <td>Leandro</td>\n        <td>Noguera</td>\n        <td>1274</td>\n        <td>leandrodnog@gmail.com</td>\n        <td>2021-04-14</td>\n        <td>CABA</td>\n    </tr>\n    <tr>\n        <td>102</td>\n        <td>German</td>\n        <td>Gerram</td>\n        <td>1234</td>\n        <td>ggerram1@hu.gov</td>\n        <td>2020-08-05</td>\n        <td>Berazategui</td>\n    </tr>\n    <tr>\n        <td>104</td>\n        <td>Garrick</td>\n        <td>Brent</td>\n        <td>6789</td>\n        <td>gbrent4@theguardian.com</td>\n        <td>2020-12-17</td>\n        <td>Moron</td>\n    </tr>\n    <tr>\n        <td>101</td>\n        <td>Esteban</td>\n        <td>Madou</td>\n        <td>2345</td>\n        <td>dkantor0@example.com</td>\n        <td>2021-07-01</td>\n        <td>Quilmes</td>\n    </tr>\n    <tr>\n        <td>103</td>\n        <td>Deloris</td>\n        <td>Fosis</td>\n        <td>5678</td>\n        <td>bsharpe2@wisc.edu</td>\n        <td>2020-08-28</td>\n        <td>Avellaneda</td>\n    </tr>\n    <tr>\n        <td>105</td>\n        <td>Bili</td>\n        <td>Baus</td>\n        <td>holamundo</td>\n        <td>bhoff5@addthis.com</td>\n        <td>2020-11-27</td>\n        <td>Moreno</td>\n    </tr>\n</table>\n<br/>\n<br/>\n<table>\n    <tr>\n        <td>1001</td>\n        <td>77900361</td>\n        <td>Westmacott</td>\n        <td>liquido</td>\n        <td>33</td>\n        <td>15.87</td>\n        <td>2020-09-02</td>\n        <td>2020-09-26</td>\n    </tr>\n    <tr>\n        <td>1002</td>\n        <td>77900362</td>\n        <td>Spirit</td>\n        <td>solido</td>\n        <td>45</td>\n        <td>66.6</td>\n        <td>2020-09-18</td>\n        <td>2020-04-14</td>\n    </tr>\n    <tr>\n        <td>1006</td>\n        <td>77900366</td>\n        <td>Schrader</td>\n        <td>polvo</td>\n        <td>0</td>\n        <td>96.54</td>\n        <td>2020-02-08</td>\n        <td>2020-08-14</td>\n    </tr>\n    <tr>\n        <td>1003</td>\n        <td>77900363</td>\n        <td>Newgrosh</td>\n        <td>polvo</td>\n        <td>0</td>\n        <td>68.19</td>\n        <td>2020-11-29</td>\n        <td>2021-02-11</td>\n    </tr>\n    <tr>\n        <td>1004</td>\n        <td>77900364</td>\n        <td>McNickle</td>\n        <td>polvo</td>\n        <td>0</td>\n        <td>53.51</td>\n        <td>2020-11-28</td>\n        <td>2020-04-17</td>\n    </tr>\n    <tr>\n        <td>1015</td>\n        <td>878787</td>\n        <td>Leche</td>\n        <td>Lacteo</td>\n        <td>75</td>\n        <td>78.82</td>\n        <td>2021-04-22</td>\n        <td>2021-04-22</td>\n    </tr>\n    <tr>\n        <td>1009</td>\n        <td>77900369</td>\n        <td>Hurry</td>\n        <td>solido</td>\n        <td>44</td>\n        <td>66.6</td>\n        <td>2020-04-07</td>\n        <td>2020-05-30</td>\n    </tr>\n    <tr>\n        <td>1005</td>\n        <td>77900365</td>\n        <td>Hudd</td>\n        <td>solido</td>\n        <td>68</td>\n        <td>66.6</td>\n        <td>2020-12-19</td>\n        <td>2020-06-19</td>\n    </tr>\n    <tr>\n        <td>1013</td>\n        <td>998745</td>\n        <td>Harina</td>\n        <td>No perecedero</td>\n        <td>58</td>\n        <td>82.53</td>\n        <td>2021-04-21</td>\n        <td>2021-04-21</td>\n    </tr>\n    <tr>\n        <td>1008</td>\n        <td>77900368</td>\n        <td>Fleming</td>\n        <td>solido</td>\n        <td>38</td>\n        <td>66.6</td>\n        <td>2020-10-26</td>\n        <td>2020-03-10</td>\n    </tr>\n    <tr>\n        <td>1011</td>\n        <td>77900328</td>\n        <td>Chocolate</td>\n        <td>solido</td>\n        <td>56</td>\n        <td>66.6</td>\n        <td>2021-04-12</td>\n        <td>2021-04-14</td>\n    </tr>\n    <tr>\n        <td>1014</td>\n        <td>123456</td>\n        <td>Cafe</td>\n        <td>No perecedero</td>\n        <td>98</td>\n        <td>78.82</td>\n        <td>2021-04-21</td>\n        <td>2021-04-22</td>\n    </tr>\n    <tr>\n        <td>1007</td>\n        <td>77900367</td>\n        <td>Bachellier</td>\n        <td>solido</td>\n        <td>59</td>\n        <td>66.6</td>\n        <td>2021-01-30</td>\n        <td>2020-07-06</td>\n    </tr>\n    <tr>\n        <td>1012</td>\n        <td>886547</td>\n        <td>Agua mineral</td>\n        <td>No perecedero</td>\n        <td>85</td>\n        <td>43.81</td>\n        <td>2021-04-21</td>\n        <td>2021-04-21</td>\n    </tr>\n</table>\n<br/>"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?min=2&max=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2"
+								},
+								{
+									"key": "max",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:41:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "632"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\n<ul>\n    <li>101</li>\n    <li>2</li>\n    <li>1001</li>\n    <li>2020-07-19</li>\n    <li>1</li>\n</ul>\n<ul>\n    <li>102</li>\n    <li>3</li>\n    <li>1008</li>\n    <li>2020-08-16</li>\n    <li>2</li>\n</ul>\n<ul>\n    <li>102</li>\n    <li>4</li>\n    <li>1007</li>\n    <li>2021-01-04</li>\n    <li>3</li>\n</ul>\n<ul>\n    <li>103</li>\n    <li>5</li>\n    <li>1006</li>\n    <li>2021-01-14</li>\n    <li>4</li>\n</ul>\n<ul>\n    <li>101</li>\n    <li>2</li>\n    <li>77900328</li>\n    <li>2021-04-22</li>\n    <li>11</li>\n</ul>\n<ul>\n    <li>101</li>\n    <li>2</li>\n    <li>77900328</li>\n    <li>2021-04-22</li>\n    <li>12</li>\n</ul>\n<ul>\n    <li>101</li>\n    <li>2</li>\n    <li>77900328</li>\n    <li>2021-04-22</li>\n    <li>13</li>\n</ul>"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?fechaMin=2020-01-01&fechaMax=2020-12-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "fechaMin",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "fechaMax",
+									"value": "2020-12-31"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:45:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\r\n\r\n\r\nCantidad productos vendidos: 18"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?max=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "3"
+								},
+								{
+									"key": "fechaMin",
+									"value": "2020-01-01",
+									"disabled": true
+								},
+								{
+									"key": "fechaMax",
+									"value": "2020-12-31",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:45:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\n<ul>\n    <li>1003</li>\n</ul>\n<ul>\n    <li>1001</li>\n</ul>\n<ul>\n    <li>1001</li>\n</ul>"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?id_producto=1003&id_usuario=104",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "fechaMin",
+									"value": "2020-01-01",
+									"disabled": true
+								},
+								{
+									"key": "fechaMax",
+									"value": "2020-12-31",
+									"disabled": true
+								},
+								{
+									"key": "id_producto",
+									"value": "1003"
+								},
+								{
+									"key": "id_usuario",
+									"value": "104"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:47:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "201"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\r\n\r\n\r\narray(1) {\n  [0]=>\n  object(stdClass)#4 (1) {\n    [\"cantidadTotal\"]=>\n    string(2) \"12\"\n  }\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?localidad=Avellaneda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "fechaMin",
+									"value": "2020-01-01",
+									"disabled": true
+								},
+								{
+									"key": "fechaMax",
+									"value": "2020-12-31",
+									"disabled": true
+								},
+								{
+									"key": "id_producto",
+									"value": "1003",
+									"disabled": true
+								},
+								{
+									"key": "id_usuario",
+									"value": "104",
+									"disabled": true
+								},
+								{
+									"key": "localidad",
+									"value": "Avellaneda"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:49:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "185"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\r\n\r\n\r\narray(1) {\n  [0]=>\n  object(stdClass)#4 (1) {\n    [\"id\"]=>\n    int(1006)\n  }\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?letra=u",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "fechaMin",
+									"value": "2020-01-01",
+									"disabled": true
+								},
+								{
+									"key": "fechaMax",
+									"value": "2020-12-31",
+									"disabled": true
+								},
+								{
+									"key": "id_producto",
+									"value": "1003",
+									"disabled": true
+								},
+								{
+									"key": "id_usuario",
+									"value": "104",
+									"disabled": true
+								},
+								{
+									"key": "localidad",
+									"value": "Avellaneda",
+									"disabled": true
+								},
+								{
+									"key": "letra",
+									"value": "u"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:50:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "488"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\n<ul>\n    <li>101</li>\n    <li>Esteban</li>\n    <li>Madou</li>\n    <li>2345</li>\n    <li>dkantor0@example.com</li>\n    <li>2021-07-01</li>\n    <li>Quilmes</li>\n</ul>\n<ul>\n    <li>105</li>\n    <li>Bili</li>\n    <li>Baus</li>\n    <li>holamundo</li>\n    <li>bhoff5@addthis.com</li>\n    <li>2020-11-27</li>\n    <li>Moreno</li>\n</ul>\n<ul>\n    <li>106</li>\n    <li>Leandro</li>\n    <li>Noguera</li>\n    <li>1274</li>\n    <li>leandrodnog@gmail.com</li>\n    <li>2021-04-14</li>\n    <li>CABA</li>\n</ul>"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Noguera/parte10ejerciciosPDOlistados/index.php?fechaMin=2020-6-1&fechaMax=2021-2-29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Noguera",
+								"parte10ejerciciosPDOlistados",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "fechaMin",
+									"value": "2020-6-1"
+								},
+								{
+									"key": "fechaMax",
+									"value": "2021-2-29"
+								},
+								{
+									"key": "id_producto",
+									"value": "1003",
+									"disabled": true
+								},
+								{
+									"key": "id_usuario",
+									"value": "104",
+									"disabled": true
+								},
+								{
+									"key": "localidad",
+									"value": "Avellaneda",
+									"disabled": true
+								},
+								{
+									"key": "letra",
+									"value": "u",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Apr 2021 05:51:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "632"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\r\n\n<style>\r\ntable, td, tr{\r\n    border: 1px solid black;\r\n    border-collapse: collapse;\r\n}\r\n</style>\n<table>\n    <tr>\n        <td>101</td>\n        <td>2</td>\n        <td>1001</td>\n        <td>2020-07-19</td>\n        <td>1</td>\n    </tr>\n    <tr>\n        <td>102</td>\n        <td>3</td>\n        <td>1008</td>\n        <td>2020-08-16</td>\n        <td>2</td>\n    </tr>\n    <tr>\n        <td>102</td>\n        <td>4</td>\n        <td>1007</td>\n        <td>2021-01-04</td>\n        <td>3</td>\n    </tr>\n    <tr>\n        <td>103</td>\n        <td>5</td>\n        <td>1006</td>\n        <td>2021-01-14</td>\n        <td>4</td>\n    </tr>\n    <tr>\n        <td>105</td>\n        <td>7</td>\n        <td>1005</td>\n        <td>2021-02-22</td>\n        <td>6</td>\n    </tr>\n    <tr>\n        <td>106</td>\n        <td>6</td>\n        <td>1003</td>\n        <td>2020-10-06</td>\n        <td>8</td>\n    </tr>\n    <tr>\n        <td>106</td>\n        <td>6</td>\n        <td>1002</td>\n        <td>2021-02-04</td>\n        <td>9</td>\n    </tr>\n</table>"
+				}
+			]
+		}
+	]
+}
