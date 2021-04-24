@@ -18,7 +18,8 @@ if(isset($_POST["codigoBarra"]) && isset($_POST["id"]) && isset($_POST["cantidad
 {
     if(Producto::ProductoExistenteBD($_POST["codigoBarra"], $_POST["cantidadItems"]) && Usuario::UsuarioExistenteBD($_POST["id"]))
     {
-        $venta = Venta::ConstructorParametrizado($_POST["id"], $_POST["cantidadItems"], $_POST["codigoBarra"]);
+        $id_producto = Producto::ObtenerID($_POST["codigoBarra"]);
+        $venta = Venta::ConstructorParametrizado($_POST["id"], $_POST["cantidadItems"], $id_producto);
 
         $retorno = $venta->InsertarVentaParametros();
 

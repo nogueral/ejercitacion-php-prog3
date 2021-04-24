@@ -35,7 +35,7 @@ class Producto{
     }
 
 
-    // BASE DE DATOS
+    //----------------------- BASE DE DATOS---------------------------------------//
 
     public static function VerificarProductoDB($prod)
     {
@@ -135,6 +135,21 @@ class Producto{
 
     }
 
+    public static function ObtenerID($codigo_de_barra){
+
+        $vec = Producto::TraerTodosLosProductos();
+
+        foreach($vec as $auxProd)
+        {
+            if($auxProd->codigo_de_barra == $codigo_de_barra)
+            {
+                return $auxProd->id_producto;
+
+            }
+        }
+
+        return null;
+    }
 
     
 	public static function ImprimirProductos(){
