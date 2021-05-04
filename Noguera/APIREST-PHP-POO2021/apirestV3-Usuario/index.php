@@ -32,6 +32,8 @@ $app->group('/usuario', function () {
 
   $this->post('/', \usuarioApi::class . ':CargarUno');
 
+  $this->post('/validarUsuario', \usuarioApi::class . ':ValidarUsuario');
+
   $this->delete('/', \usuarioApi::class . ':BorrarUno');
 
   $this->put('/', \usuarioApi::class . ':ModificarUno');

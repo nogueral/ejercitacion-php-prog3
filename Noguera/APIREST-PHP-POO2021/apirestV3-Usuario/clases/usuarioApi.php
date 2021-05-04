@@ -50,6 +50,25 @@ class usuarioApi extends usuario implements IApiUsable
 
         return $response;
     }
+
+	  public function ValidarUsuario($request, $response, $args){
+		$ArrayDeParametros = $request->getParsedBody();
+		$mail=$ArrayDeParametros["mail"];
+		$clave=$ArrayDeParametros["clave"];
+		$retorno=Usuario::VerificarUsuario($mail,$clave);
+		$objDelaRespuesta= new stdclass();
+		if($retorno==true)
+		{
+			$objDelaRespuesta->resultado="Login ok!!!";
+		}
+		else
+		{
+			$objDelaRespuesta->resultado="Error en usuario y/o contraseña";
+		}
+		$newResponse = $response->withJson($objDelaRespuesta, 200);  
+		return $newResponse;
+	  }
+
       public function BorrarUno($request, $response, $args) {
      	$ArrayDeParametros = $request->getParsedBody();
      	$id=$ArrayDeParametros['id_usuario'];

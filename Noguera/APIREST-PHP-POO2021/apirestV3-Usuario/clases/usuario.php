@@ -171,4 +171,23 @@ class usuario
 	  	return "Metodo mostar:".$this->nombre."  ".$this->apellido."  ".$this->fecha_de_registro."  ".$this->clave."  ".$this->mail."  ".$this->localidad."  ".$this->id_usuario;
 	}
 
+	public static function VerificarUsuario($mail, $clave){
+
+		$vec = self::TraerTodosLosUsuarios();
+
+		foreach($vec as $auxUsuario){
+
+			if(trim($auxUsuario->mail) == trim($mail))
+			{
+				if(trim($auxUsuario->clave) == trim($clave)){
+
+					return true;
+				} 
+			}
+
+		}
+
+		return false;
+	}
+
 }
