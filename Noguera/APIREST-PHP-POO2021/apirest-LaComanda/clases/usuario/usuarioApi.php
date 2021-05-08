@@ -1,6 +1,6 @@
 <?php
 require_once 'usuario.php';
-require_once 'IApiUsable.php';
+require_once 'C:/xampp\htdocs/Noguera/APIREST-PHP-POO2021/apirest-LaComanda/clases/IApiUsable.php';
 
 class usuarioApi extends usuario implements IApiUsable
 {
@@ -21,53 +21,24 @@ class usuarioApi extends usuario implements IApiUsable
         $nombre= $ArrayDeParametros['nombre'];
         $apellido= $ArrayDeParametros['apellido'];
         $clave= $ArrayDeParametros['clave'];
-		$mail= $ArrayDeParametros['mail'];
-		$localidad= $ArrayDeParametros['localidad'];
-		$fecha_de_registro=date("Y-m-d");
+		$userName= $ArrayDeParametros['userName'];
+		$puesto= $ArrayDeParametros['puesto'];
+		$fecha_de_ingreso=date("Y-m-d");
         
         $user = new Usuario();
         $user->nombre=$nombre;
         $user->apellido=$apellido;
         $user->clave=$clave;
-		$user->mail=$mail;
-		$user->localidad=$localidad;
-		$user->fecha_de_registro=$fecha_de_registro;
+		$user->userName=$userName;
+		$user->puesto=$puesto;
+		$user->fecha_de_ingreso=$fecha_de_ingreso;
 
         $user->InsertarUsuarioParametros();
 
-        $archivos = $request->getUploadedFiles();
-        $destino="./fotos/";
-        //var_dump($archivos);
-        //var_dump($archivos['foto']);
-
-        $nombreAnterior=$archivos['foto']->getClientFilename();
-        $extension= explode(".", $nombreAnterior)  ;
-        //var_dump($nombreAnterior);
-        $extension=array_reverse($extension);
-
-        $archivos['foto']->moveTo($destino.$nombre.".".$extension[0]);
-        $response->getBody()->write("se guardo la foto");
+        $response->getBody()->write("Se cargo el usuario correctamente");
 
         return $response;
     }
-
-		public function ValidarUsuario($request, $response, $args){
-		$ArrayDeParametros = $request->getParsedBody();
-		$mail=$ArrayDeParametros["mail"];
-		$clave=$ArrayDeParametros["clave"];
-		$retorno=Usuario::VerificarUsuario($mail,$clave);
-		$objDelaRespuesta= new stdclass();
-		if($retorno==true)
-		{
-			$objDelaRespuesta->resultado="Login ok!!!";
-		}
-		else
-		{
-			$objDelaRespuesta->resultado="Error en usuario y/o contraseña";
-		}
-		$newResponse = $response->withJson($objDelaRespuesta, 200);  
-		return $newResponse;
-	  }
 
       public function BorrarUno($request, $response, $args) {
      	$ArrayDeParametros = $request->getParsedBody();
@@ -91,21 +62,18 @@ class usuarioApi extends usuario implements IApiUsable
     }
      
      public function ModificarUno($request, $response, $args) {
-     	//$response->getBody()->write("<h1>Modificar  uno</h1>");
-     	$ArrayDeParametros = $request->getParsedBody();
-	    //var_dump($ArrayDeParametros);    	
+     	$ArrayDeParametros = $request->getParsedBody();   	
 	    $user = new Usuario();
 	    $user->id_usuario=$ArrayDeParametros['id_usuario'];
 	    $user->nombre=$ArrayDeParametros['nombre'];
 	    $user->apellido=$ArrayDeParametros['apellido'];
 	    $user->clave=$ArrayDeParametros['clave'];
-		$user->mail=$ArrayDeParametros['mail'];
-		$user->localidad=$ArrayDeParametros['localidad'];
+		$user->userName=$ArrayDeParametros['userName'];
+		$user->puesto=$ArrayDeParametros['puesto'];
 		$user->fecha_de_registro=date("Y-m-d");
 
 	   	$resultado =$user->ModificarUsuarioParametros();
 	   	$objDelaRespuesta= new stdclass();
-		//var_dump($resultado);
 		$objDelaRespuesta->resultado=$resultado;
 		return $response->withJson($objDelaRespuesta, 200);		
     }
