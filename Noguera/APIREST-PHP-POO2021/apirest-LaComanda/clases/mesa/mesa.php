@@ -36,7 +36,7 @@ class Mesa
 				$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 				$consulta =$objetoAccesoDato->RetornarConsulta("INSERT into mesa (nroMesa,cantComensales)values(:nroMesa,:cantComensales)");
 				$consulta->bindValue(':nroMesa',$this->nroMesa, PDO::PARAM_INT);
-				$consulta->bindValue(':cantidad',$this->cantidad, PDO::PARAM_INT);
+				$consulta->bindValue(':cantComensales',$this->cantComensales, PDO::PARAM_INT);
 				$consulta->execute();		
 				return $objetoAccesoDato->RetornarUltimoIdInsertado();
 	 }

@@ -59,7 +59,7 @@ class Producto
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 			$consulta =$objetoAccesoDato->RetornarConsulta("select * from producto where id_producto = $id");
 			$consulta->execute();
-			$usuarioBuscado= $consulta->fetchObject('usuario');
+			$usuarioBuscado= $consulta->fetchObject('producto');
 			return $usuarioBuscado;				
 
 			
