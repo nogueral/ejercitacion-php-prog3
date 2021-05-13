@@ -23,6 +23,33 @@ desarrollo para obtener información sobre los errores
 
 $app = new \Slim\App(["settings" => $config]);
 
+$VerificadorDeCredenciales = function ($request, $response, $next) {
+
+  if($request->isGet())
+  {
+     $response->getBody()->write('<p>NO necesita credenciales para los get</p>');
+     $response = $next($request, $response);
+  }
+  else
+  {
+    $response->getBody()->write('<p>verifico credenciales</p>');
+    $ArrayDeParametros = $request->getParsedBody();
+    $nombre=$ArrayDeParametros['mail'];
+    $tipo=$ArrayDeParametros['tipo'];
+    if($tipo=="administrador")
+    {
+      $response->getBody()->write("<h3>Bienvenido $nombre </h3>");
+      $response = $next($request, $response);
+    }
+    else
+    {
+      $response->getBody()->write('<p>no tenes habilitado el ingreso</p>');
+    }  
+  }  
+  $response->getBody()->write('<p>vuelvo del verificador de credenciales</p>');
+  return $response;  
+};
+
 /*LLAMADA A METODOS DE INSTANCIA DE UNA CLASE*/
 $app->group('/usuario', function () {
  
@@ -38,6 +65,6 @@ $app->group('/usuario', function () {
 
   $this->put('/', \usuarioApi::class . ':ModificarUno');
      
-});
+})->add($VerificadorDeCredenciales);
 
 $app->run();

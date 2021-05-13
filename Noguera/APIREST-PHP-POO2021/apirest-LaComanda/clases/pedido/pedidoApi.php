@@ -5,43 +5,53 @@ require_once 'C:/xampp\htdocs/Noguera/APIREST-PHP-POO2021/apirest-LaComanda/clas
 class pedidoApi extends Pedido implements IApiUsable
 {
  	public function TraerUno($request, $response, $args) {
-     	$id=$args['id_mesa'];
-    	$mesa=Mesa::TraerUnaMesa($id);
-     	$newResponse = $response->withJson($mesa, 200);  
+     	$id=$args['id_pedido'];
+    	$pedido=Pedido::TraerUnPedido($id);
+     	$newResponse = $response->withJson($pedido, 200);  
     	return $newResponse;
     }
 	
      public function TraerTodos($request, $response, $args) {
-      	$traerTodasLasMesas=Mesa::TraerTodasLasMesas();
-     	$newResponse = $response->withJson($traerTodasLasMesas, 200);  
+      	$traerTodosLosPedidos=Pedido::TraerTodosLosPedidos();
+     	$newResponse = $response->withJson($traerTodosLosPedidos, 200);  
     	return $newResponse;
     }
 
       public function CargarUno($request, $response, $args) {
-     	 $ArrayDeParametros = $request->getParsedBody();
+     	$ArrayDeParametros = $request->getParsedBody();
+		$nroPedido= $ArrayDeParametros['nroPedido'];
         $nroMesa= $ArrayDeParametros['nroMesa'];
-        $cantComensales= $ArrayDeParametros['cantComensales'];
+		$nombreCliente= $ArrayDeParametros['nombreCliente'];
+		$producto= $ArrayDeParametros['producto'];
+		$tipo= $ArrayDeParametros['tipo'];
+		$cantidad= $ArrayDeParametros['cantidad'];
+		$estado= $ArrayDeParametros['estado'];
         
-        $mesa = new Mesa();
-        $mesa->nroMesa=$nroMesa;
-        $mesa->cantComensales=$cantComensales;
+        $pedido = new Pedido();
+        $pedido->nroPedido=$nroPedido;
+        $pedido->nroMesa=$nroMesa;
+		$pedido->nombreCliente=$nombreCliente;
+		$pedido->producto=$producto;
+		$pedido->tipo=$tipo;
+		$pedido->cantidad=$cantidad;
+		$pedido->estado=$estado;
 
-        $mesa->InsertarMesaParametros();
+        $pedido->InsertarPedidoParametros();
 
-        $response->getBody()->write("Se cargo la mesa correctamente");
+        $response->getBody()->write("Se cargo pedido correctamente");
 
         return $response;
     }
 
       public function BorrarUno($request, $response, $args) {
      	$ArrayDeParametros = $request->getParsedBody();
-     	$id=$ArrayDeParametros['id_mesa'];
-     	$mesa= new Mesa();
-     	$mesa->id_mesa=$id;
-     	$cantidadDeBorrados=$mesa->BorrarMesa();
+     	$id=$ArrayDeParametros['id_pedido'];
+     	$pedido= new Pedido();
+     	$pedido->id_mesa=$id;
+     	$cantidadDeBorrados=$pedido->BorrarPedido();
 
      	$objDelaRespuesta= new stdclass();
-	    $objDelaRespuesta->cantComensales=$cantidadDeBorrados;
+	    $objDelaRespuesta->cantidadDeBorrados=$cantidadDeBorrados;
 	    if($cantidadDeBorrados>0)
 	    	{
 	    		 $objDelaRespuesta->resultado="Mesa eliminada";
@@ -56,12 +66,24 @@ class pedidoApi extends Pedido implements IApiUsable
      
      public function ModificarUno($request, $response, $args) {
      	$ArrayDeParametros = $request->getParsedBody();   	
-	    $mesa = new Mesa();
-	    $mesa->id_mesa=$ArrayDeParametros['id_mesa'];
-	    $mesa->nroMesa=$ArrayDeParametros['nroMesa'];
-	    $mesa->cantComensales=$ArrayDeParametros['cantComensales'];
+		$nroPedido= $ArrayDeParametros['nroPedido'];
+        $nroMesa= $ArrayDeParametros['nroMesa'];
+		$nombreCliente= $ArrayDeParametros['nombreCliente'];
+		$producto= $ArrayDeParametros['producto'];
+		$tipo= $ArrayDeParametros['tipo'];
+		$cantidad= $ArrayDeParametros['cantidad'];
+		$estado= $ArrayDeParametros['estado'];
 
-	   	$resultado =$mesa->ModificarMesaParametros();
+		$pedido = new Pedido();
+		$pedido->nroPedido=$nroPedido;
+        $pedido->nroMesa=$nroMesa;
+		$pedido->nombreCliente=$nombreCliente;
+		$pedido->producto=$producto;
+		$pedido->tipo=$tipo;
+		$pedido->cantidad=$cantidad;
+		$pedido->estado=$estado;
+
+	   	$resultado =$pedido->ModificarPedidoParametros();
 	   	$objDelaRespuesta= new stdclass();
 		$objDelaRespuesta->resultado=$resultado;
 		return $response->withJson($objDelaRespuesta, 200);		

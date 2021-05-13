@@ -4,67 +4,87 @@ class Pedido
 	public $id_pedido;
  	public $nroPedido;
   	public $nroMesa;
+	public $nombreCliente;
+	public $producto;
+	public $tipo;
+	public $cantidad;
+	public $estado;
 	  
 
-  	public function BorrarMesa()
+  	public function BorrarPedido()
 	 {
 	 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 			$consulta =$objetoAccesoDato->RetornarConsulta("
 				delete 
-				from mesa 				
-				WHERE id_mesa=:id_mesa");	
-				$consulta->bindValue(':id_mesa',$this->id_mesa, PDO::PARAM_INT);		
+				from pedido 				
+				WHERE id_pedido=:id_pedido");	
+				$consulta->bindValue(':id_pedido',$this->id_pedido, PDO::PARAM_INT);		
 				$consulta->execute();
 				return $consulta->rowCount();
 	 }
 
 
-	  public function ModificarMesaParametros()
+	  public function ModificarPedidoParametros()
 	 {
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("update mesa 
-			set nroMesa=:nroMesa,
-			cantComensales=:cantComensales
-			WHERE id_mesa=:id_mesa");
-			$consulta->bindValue(':id_mesa',$this->id_mesa, PDO::PARAM_INT);
-			$consulta->bindValue(':nroMesa',$this->nroMesa, PDO::PARAM_INT);
-			$consulta->bindValue(':cantComensales', $this->cantComensales, PDO::PARAM_INT);
+			$consulta =$objetoAccesoDato->RetornarConsulta("update pedido 
+			set nroPedido=:nroPedido,
+			nroMesa=:nroMesa,
+			nombreCliente=:nombreCliente,
+			producto=:producto,
+			tipo=:tipo,
+			cantidad=:cantidad,
+			estado=:estado
+			WHERE id_pedido=:id_pedido");
+			$consulta->bindValue(':id_pedido',$this->id_pedido, PDO::PARAM_INT);
+			$consulta->bindValue(':nroPedido',$this->nroPedido, PDO::PARAM_STR);
+			$consulta->bindValue(':nroMesa', $this->nroMesa, PDO::PARAM_INT);
+			$consulta->bindValue(':nombreCliente', $this->nombreCliente, PDO::PARAM_STR);
+			$consulta->bindValue(':producto', $this->producto, PDO::PARAM_STR);
+			$consulta->bindValue(':tipo', $this->tipo, PDO::PARAM_STR);
+			$consulta->bindValue(':cantidad', $this->cantidad, PDO::PARAM_INT);
+			$consulta->bindValue(':estado', $this->estado, PDO::PARAM_STR);
 			return $consulta->execute();
 	 }
 
-	 public function InsertarMesaParametros()
+	 public function InsertarPedidoParametros()
 	 {
 				$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-				$consulta =$objetoAccesoDato->RetornarConsulta("INSERT into mesa (nroMesa,cantComensales)values(:nroMesa,:cantComensales)");
-				$consulta->bindValue(':nroMesa',$this->nroMesa, PDO::PARAM_INT);
-				$consulta->bindValue(':cantidad',$this->cantidad, PDO::PARAM_INT);
+				$consulta =$objetoAccesoDato->RetornarConsulta("INSERT into pedido (nroPedido,nroMesa,nombreCliente,producto,tipo,cantidad,estado)values(:nroPedido,:nroMesa,:nombreCliente,:producto,:tipo,:cantidad,:estado)");
+				$consulta->bindValue(':nroPedido',$this->nroPedido, PDO::PARAM_STR);
+				$consulta->bindValue(':nroMesa', $this->nroMesa, PDO::PARAM_INT);
+				$consulta->bindValue(':nombreCliente', $this->nombreCliente, PDO::PARAM_STR);
+				$consulta->bindValue(':producto', $this->producto, PDO::PARAM_STR);
+				$consulta->bindValue(':tipo', $this->tipo, PDO::PARAM_STR);
+				$consulta->bindValue(':cantidad', $this->cantidad, PDO::PARAM_INT);
+				$consulta->bindValue(':estado', $this->estado, PDO::PARAM_STR);
 				$consulta->execute();		
 				return $objetoAccesoDato->RetornarUltimoIdInsertado();
 	 }
 
 
-  	public static function TraerTodasLasMesas()
+  	public static function TraerTodosLosPedidos()
 	{
 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-		$consulta =$objetoAccesoDato->RetornarConsulta("select * from mesa");
+		$consulta =$objetoAccesoDato->RetornarConsulta("select * from pedido");
 		$consulta->execute();			
-		return $consulta->fetchAll(PDO::FETCH_CLASS, "mesa");		
+		return $consulta->fetchAll(PDO::FETCH_CLASS, "pedido");		
 	}
 
-	public static function TraerUnaMesa($id) 
+	public static function TraerUnPedido($id) 
 	{
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("select * from mesa where id_mesa = $id");
+			$consulta =$objetoAccesoDato->RetornarConsulta("select * from pedido where id_pedido = $id");
 			$consulta->execute();
-			$usuarioBuscado= $consulta->fetchObject('mesa');
-			return $usuarioBuscado;				
+			$pedido= $consulta->fetchObject('pedido');
+			return $pedido;				
 
 			
 	}
 
 	public function mostrarDatos()
 	{
-	  	return "Metodo mostrar: ".$this->nroMesa."  ".$this->cantidad."  ".$this->id_mesa."  ".$this->id_producto;
+	  	return "Metodo mostrar: ".$this->id_pedido."  ".$this->nroPedido."  ".$this->nroMesa."  ".$this->nombreCliente." ".$this->producto." ".$this->tipo." ".$this->cantidad." ".$this->estado;
 	}
 
 

@@ -60,4 +60,18 @@ $app->group('/mesa', function () {
      
 });
 
+$app->group('/pedido', function () {
+ 
+  $this->get('/', \pedidoApi::class . ':traerTodos');
+ 
+  $this->get('/{id_pedido}', \pedidoApi::class . ':traerUno');
+
+  $this->post('/', \pedidoApi::class . ':CargarUno');
+
+  $this->delete('/', \pedidoApi::class . ':BorrarUno');
+
+  $this->put('/', \pedidoApi::class . ':ModificarUno');
+     
+});
+
 $app->run();
