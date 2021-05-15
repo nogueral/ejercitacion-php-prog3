@@ -38,6 +38,20 @@ class pedidoApi extends Pedido implements IApiUsable
 
         $pedido->InsertarPedidoParametros();
 
+		$archivos = $request->getUploadedFiles();
+		if($archivos['foto']->getError() === UPLOAD_ERR_OK){
+			$destino="C:/xampp/htdocs/Noguera/APIREST-PHP-POO2021/apirest-LaComanda/clases/pedido/fotos";
+			var_dump($archivos);
+			//var_dump($archivos['foto']);
+	
+			$nombreAnterior=$archivos['foto']->getClientFilename();
+			$extension= explode(".", $nombreAnterior);
+			//var_dump($nombreAnterior);
+			$extension=array_reverse($extension);
+	
+			$archivos['foto']->moveTo($destino.$pedido->nroPedido.".".$extension[0]);
+		}
+
         $response->getBody()->write("Se cargo pedido correctamente");
 
         return $response;
